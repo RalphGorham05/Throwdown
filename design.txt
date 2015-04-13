@@ -1,0 +1,7 @@
+Throwdown
+
+each player picks number from 1-100
+player closer to random # plays at home
+
+each player gets deck of 25 random cards
+allowed 5 cards in hand at time
