@@ -1,8 +1,14 @@
 Throwdown
 
+
 each player picks number from 1-100
 player closer to random # plays at home
 
 each player gets deck of 25 random cards
 allowed 5 cards in hand at time
 
+cards are ranked 1-3 stars
+  -based on stats
+	-if avg over 7/7/7 in pts, assists, rebs = 3*
+	-	over 4/4/4 			 = 2*
+	-else 					 = 1*
