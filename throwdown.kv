@@ -1,0 +1,102 @@
+#: import SwapTransition kivy.uix.screenmanager.SwapTransition
+
+
+ScreenManagement:
+    transition: SwapTransition()
+    MainScreen:
+    HelpScreen:
+	StartScreen:
+	
+
+<CustomLayout>
+    canvas.after:
+        Color:
+            rgba: 0, 0, 0, 1
+
+		Rectangle:
+			pos: (200,200)
+			size: (50,59)
+
+
+<MainScreen>:
+    name: 'main'
+	FloatLayout:
+
+        Image:
+            source: 'throwdown_logo.jpg'
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
+            pos_hint: {'center_x':.5, 'center_y': .5}
+
+
+		Button:
+			on_release: app.root.current = 'start'
+			text: 'Start'
+			color: (255, 0, 0, 1)
+			font_size: 20
+			background_color: (0, 0, 0, 1)
+			size_hint:(.25, .1)
+			pos_hint: {'center_x':.5, 'y':.5}	
+		
+		
+		
+		Button:
+			on_release: app.root.current = 'help'
+			text: 'Help'
+			color: (255, 0, 0, 1)
+			font_size: 15
+			background_color: (0, 0, 0, 1)
+			size_hint:(.25, .1)
+			pos_hint: {'center_x':.5, 'y':.4}
+
+		
+
+	
+
+<HelpScreen>:
+    name: 'help'
+	FloatLayout:
+
+
+		Button:
+			on_release: app.root.current = 'main'
+			text: 'Press here to go back home'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos_hint: {'right':.2, 'top':1}
+
+		Label:
+			text: 'This is Throwdown'
+			font_name: 'fonts\8-BIT.ttf'
+			font_size: 30
+			pos_hint: {'center_x':.5, 'y':.3}
+
+		Label:
+			text: 'Game Objective'
+            font_name: 'fonts\8-BIT.ttf'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.2}
+
+		Label:
+			text: 'You choose your character based on whether you are good or evil.\n You must defeat each character in all the locations on each continent. Once you beat each character, you will then fight a boss character.\n If you beat the boss character, you will have conquered that continent. You can select another continent to conquer until you finish them all. After that, you fight\n the Game boss to see if you are a true warrior of Destiny.'
+			font_name: 'fonts\Halo3.ttf'
+            font_size: 10
+			#pos: (100,50)
+			pos_hint: {'x':.3, 'y':.1}
+			
+			
+<StartScreen>:
+    name: 'start'
+	FloatLayout:
+
+
+		Button:
+			on_release: app.root.current = 'main'
+			text: 'Press here to go back home'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos_hint: {'right':.2, 'top':1}
+
+    
+
