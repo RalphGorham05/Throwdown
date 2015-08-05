@@ -97,6 +97,34 @@ ScreenManagement:
 			font_size: 10
 			size_hint:(.25, .1)
 			pos_hint: {'right':.2, 'top':1}
+			
+		Label:
+			text: 'Enter a number Player 1'
+            font_name: 'fonts\8-BIT.ttf'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.2}
+			
+		TextInput:
+			id: p1_number
+			size_hint:(.25,.05)
+			pos_hint: {'center_x':.5, 'y':.6}
+			focus: True
+			multiline: False 
+			
+			
+		Label:
+			text: 'Enter a number between 1-100 Player 2'
+            font_name: 'fonts\8-BIT.ttf'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.7}
+			
+		TextInput:
+			id: p2_number
+			size_hint:(.25,.05)
+			pos_hint: {'center_x':.5, 'y':.9}
+			focus: True
+			multiline: False 
+			
 
     
 

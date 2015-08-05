@@ -10,6 +10,8 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.graphics import Color, Rectangle
 from kivy.uix.floatlayout import FloatLayout
 
+from random import randint
+
 
 class CustomLayout(FloatLayout):
 
@@ -26,6 +28,42 @@ class HelpScreen(Screen):
 
 class StartScreen(Screen):
     pass
+
+    def pick_numbers(default, number1, number2):
+        player_numbers = []
+
+        if not (1 <= number1 <= 100):
+            print 'invalid number, one more chance to pick number'
+            number1 = input('Enter a number between 1-100 Player 1: ')
+
+        player_numbers.append(number1)
+        
+        
+        if not (1 <= number2 <= 100):
+            print 'invalid number, one more chance to pick number'
+            number2 = input('Enter a number between 1-100 Player 2: ')
+
+        player_numbers.append(number2)
+
+        return player_numbers
+
+
+    def home():
+        numbers = pick_numbers()
+
+        home = randint(1,100)
+
+
+        if (abs(numbers[0] - home) < abs(numbers[1] - home)):
+            print 'p1 is home'
+
+        elif(abs(numbers[0] - home) == abs(numbers[1] - home)):
+            print 'What are the odds!'
+            pick_numbers()
+    
+        else:
+            print 'p2 is home'
+
 
 
 class ScreenManagement(ScreenManager):
